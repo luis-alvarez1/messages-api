@@ -1,5 +1,9 @@
 import { server } from "./server";
 
-server.start({ port: 8080 }, ({ port }) => {
-  console.log("server on port", port);
+import "./db";
+
+const port = process.env.PORT || 8080;
+
+server.start({ port }, ({ port }) => {
+  console.log("server on http://localhost:" + port);
 });

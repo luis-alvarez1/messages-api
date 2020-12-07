@@ -1,3 +1,19 @@
 type Query {
-  query: String!
+  messages: [Message!]
+}
+
+type Mutation {
+  createMessage(input: CreateMessageInput): Message
+}
+
+type Message {
+  title: String!
+  content: String!
+  author: String!
+}
+
+input CreateMessageInput {
+  title: String!
+  content: String!
+  author: String!
 }

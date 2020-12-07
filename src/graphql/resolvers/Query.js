@@ -1,6 +1,6 @@
+import Message from "../../models/Message";
+
 const Query = {
-  query: () => {
-    return "some data";
-  },
+  messages: async () => await Message.find(),
 };
 export default Query;
