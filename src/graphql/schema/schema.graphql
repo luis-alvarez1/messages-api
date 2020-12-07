@@ -3,10 +3,11 @@ type Query {
 }
 
 type Mutation {
-  createMessage(input: CreateMessageInput): Message
+  createMessage(input: CreateMessageInput): Message!
 }
 
 type Message {
+  _id: ID!
   title: String!
   content: String!
   author: String!
